@@ -15,6 +15,7 @@ class Block {
             this.nonce++
             this.hash = this.calculateHash()
         }
+        console.log(`WINNER NOUNCE: ${this.nonce}`);
         console.log(`BLOCK MINED: ${this.hash}`)
     }
 
@@ -26,7 +27,7 @@ class Block {
 class Blockchain {
     constructor() {
         this.chain = [this.createGenesisBlock()]
-        this.difficulty = 4
+        this.difficulty = 5
     }
 
     createGenesisBlock() {
